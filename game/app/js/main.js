@@ -1,4 +1,4 @@
 
 var bsg = new Game('Battle Ship');
 
-bsg.start();
+bsg.start(); //start game

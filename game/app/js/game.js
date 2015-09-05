@@ -1,7 +1,7 @@
 
 var Game = function(name){
     this.name = name;
-    //TODO: number of shots should be retrieved from a constant
+
     var maxNumShots = 10;
     this.players = [];
 

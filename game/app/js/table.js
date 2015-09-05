@@ -12,7 +12,7 @@ var Table = function(number){
 }
 
 Table.prototype._createShips = function(){
-
+//to do
     var numShips = 1;
     for(var i = 0; i < numShips; i++){
         var ship = new Ship(i, 3);
