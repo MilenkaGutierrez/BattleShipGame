@@ -18,7 +18,8 @@ Game.prototype.start = function(){
     do{
         var pos = this._doShot();
         numShots++;
-        console.log('TMP: table', this.players[0].table._field);
+        console.log('TMP: table');
+        console.log(this.players[0].table._field);
     }while(numShots < 3);
 }
 

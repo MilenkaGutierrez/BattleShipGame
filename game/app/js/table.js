@@ -1,6 +1,4 @@
-/**
- * Created by milenkagutierrez on 9/1/2015.
- */
+
 var Table = function(number){
     this.size = number;
     this.ships = [];
@@ -14,7 +12,7 @@ var Table = function(number){
 }
 
 Table.prototype._createShips = function(){
-    //TODO: Number of ships should be retrieved from a constant
+
     var numShips = 1;
     for(var i = 0; i < numShips; i++){
         var ship = new Ship(i, 3);
