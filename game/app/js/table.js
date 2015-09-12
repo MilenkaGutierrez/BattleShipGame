@@ -34,9 +34,8 @@ Table.prototype._initField = function (){
 }
 
 Table.prototype._placeShips = function (){
-    var direction = parseInt(Math.random()*10);
 
-    if(direction < 5 || this.sizev > 3) {
+    if(this.sizev > 3) {
         for (var j = 0; j < this.ships.length; j++) {
             var ship = this.ships[j];
 
@@ -50,12 +49,12 @@ Table.prototype._placeShips = function (){
             }while(place1>=this.sizev-ship.size);
 
             for (var k = place1; k < (num + ship.size); k++) {
-                this._field[place0][k] = j.toString();
+                this._field[place0][k] = ship.id;
             }
         }
     }
 
-    if(direction >= 5 || this.size > 3) {
+    if(this.size > 3) {
         for (var j = 0; j < this.ships.length; j++) {
             var ship = this.ships[j];
 
@@ -69,7 +68,7 @@ Table.prototype._placeShips = function (){
             }while(place1>=this.sizev);
 
             for (var k = place0; k < (num + ship.size); k++) {
-                this._field[k][place1] = j.toString();
+                this._field[k][place1] = ship.id;
             }
         }
     }
