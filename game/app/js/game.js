@@ -20,16 +20,21 @@ Game.prototype.start = function(){
 
     this.players[0].createTable(num[0], num[1]);
 
-    /*this.players[0].table._createShips();
-    this.players[0].table._initField();
-    this.players[0].table._placeShips();*/
-
     var numShots = 0;
     var maxShots = parseInt((num[0]*num[1])/3);
+
+    console.log("You have ",maxShots," shots");
+
     do{
         var pos = this.players[0].table._doShot();
+
         if(pos == 1)
             numShots++;
+
+        if(pos == 2)
+            console.log("Oops, you already hit that location");
+
+        console.log("You still have ",maxShots-numShots," shots");
     }while(numShots < maxShots);
 
     console.log('The game finished');

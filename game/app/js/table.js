@@ -17,10 +17,16 @@ var Table = function(number, number2){
 Table.prototype._createShips = function(){
 
     var cont = this.size * this.sizev;
-    var sizeS=3;
+    var sizeS;
     var numShips = parseInt(cont/20)+1;
     for(var i = 0; i < numShips; i++){
-    //todo
+        var rand = parseInt(Math.random() * 10);
+        if(rand <= 3 && rand > 0)
+            sizeS = 1;
+        if(rand <= 6 && rand > 3)
+            sizeS = 2;
+        else
+            sizeS = 3;
         var ship = new Ship(i, sizeS);
         this.ships.push(ship);
     }
