@@ -46,7 +46,47 @@ Table.prototype._placeShips = function (){
     var direction = parseInt(Math.random() * 10);
     var flag = 0;
 
-    //todo
+    if(this.sizev > 3 && direction > 5 && flag != 1) {
+        for (var j = 0; j < this.ships.length; j++) {
+            var ship = this.ships[j];
+
+            var num = parseInt(Math.random() * (this.size - ship.size));
+
+            do {
+                var place0 = parseInt(Math.random() * 10);
+            }while(place0>this.size);
+            do {
+                var place1 = parseInt(Math.random() * 10);
+            }while(place1>=this.sizev-ship.size);
+
+            for (var k = place1; k < (num + ship.size); k++) {
+                if(this._field[place0][k] === '-')
+                    this._field[place0][k] = ship.id;
+                flag = 1;
+            }
+        }
+    }
+
+    if(this.sizev > 3 && direction <= 5 && flag != 1) {
+        for (var j = 0; j < this.ships.length; j++) {
+            var ship = this.ships[j];
+
+            var num = parseInt(Math.random() * (this.size - ship.size));
+
+            do {
+                var place0 = parseInt(Math.random() * 10);
+            }while(place0>this.size);
+            do {
+                var place1 = parseInt(Math.random() * 10);
+            }while(place1>=this.sizev-ship.size);
+
+            for (var k = place1; k < (num + ship.size); k++) {
+                if(this._field[place0][k] === '-')
+                    this._field[place0][k] = ship.id;
+                flag = 1;
+            }
+        }
+    }
 
     if(this.size > 3 && direction > 5 && flag != 1) {
         for (var j = 0; j < this.ships.length; j++) {
