@@ -155,7 +155,7 @@ Table.prototype._doShot = function(){
             }
 
             if(kill == 0)
-                console.log("Sunked ship ", idShip, "!!");
+                console.log("Sunked ship number ", idShip, "!!");
         }
         return 1;
     }

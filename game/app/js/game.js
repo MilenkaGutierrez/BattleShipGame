@@ -41,9 +41,6 @@ Game.prototype.start = function(){
     console.log('TMP: table', this.players[0].table._field);
 }
 
-//window.confirm() para aceptar o rechazar
-//window.prompt() para introducir valores desde consola
-
 Game.prototype._createPlayers = function(){
     var numPlayers = 1;
     for(var i = 0; i < numPlayers; i++){
