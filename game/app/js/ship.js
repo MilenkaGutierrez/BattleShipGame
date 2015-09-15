@@ -1,5 +1,5 @@
 
-var Ship = function(){
-    var size = Number;
-    var id = Number;
+var Ship = function(ident, sizeShip){
+    this.size = sizeShip;
+    this.id = ident;
 }
