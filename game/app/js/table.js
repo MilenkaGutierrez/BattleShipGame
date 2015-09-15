@@ -142,13 +142,13 @@ Table.prototype._doShot = function(){
 
         if (this._field[i][j] == '-') {
             this._field[i][j] = 'F';
-            console.log("Shot failed!");
+            console.log("Shot failed. position: ",place);
         }
         else {
             var idShip = this._field[i][j];
             var kill = 0;
             this._field[i][j] = 'H';
-            console.log("Good shot!");
+            console.log("Good shot!! position: ",place);
 
             for(var n = 0; n < this.size ; n++)
             {
@@ -159,7 +159,7 @@ Table.prototype._doShot = function(){
             }
 
             if(kill == 0)
-                console.log("Sunked ship!!");
+                console.log("Sunked ship ", idShip, "!!");
         }
         return 1;
     }
